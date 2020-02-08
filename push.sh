@@ -11,8 +11,8 @@ then
 	exit 1
 fi
 
-cp ~/.vim/*.vim . &&
-cp ~/.vim/autoload . -r &&
+cp ~/.vim/*.vim .vim/ &&
+cp ~/.vim/autoload .vim/ -r &&
 git add . &&
 git commit -e
 git push $1 "$2"
