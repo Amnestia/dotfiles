@@ -1,0 +1,1 @@
+/home/amnestia/.vimrc
