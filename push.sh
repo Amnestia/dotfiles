@@ -12,6 +12,7 @@ then
 fi
 
 cp ~/.vim/*.vim .vim/ &&
+cp ~/.vim/coc-settings.json .vim/ &&
 cp ~/.vim/autoload .vim/ -r &&
 git add . &&
 git commit -e
