@@ -2,12 +2,14 @@ set ff=unix
 set encoding=utf-8
 set autoindent smartindent smarttab
 set number relativenumber
+set ignorecase
+set smartcase
 set splitbelow
 set splitright
 set cursorline
 set incsearch
 set hlsearch
-set breakindent
+set ttyfast
 set tabstop=4
 set shiftwidth=4
 set updatetime=300
