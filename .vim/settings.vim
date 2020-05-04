@@ -1,10 +1,19 @@
 set ff=unix
 set encoding=utf-8
 set autoindent smartindent smarttab
+set number relativenumber
+set splitbelow
+set splitright
+set cursorline
+set incsearch
+set hlsearch
+set breakindent
 set tabstop=4
 set shiftwidth=4
-set number
-
+set updatetime=300
+set undolevels=512
+set history=512
+set scrolloff=512
 
 filetype plugin on
 filetype plugin indent on

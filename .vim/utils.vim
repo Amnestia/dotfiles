@@ -13,7 +13,7 @@ autocmd Syntax * RainbowParenthesesLoadBraces
 function! StripTrailingWhitespace()
 	if exists('b:noStrip')
 		return
-	endif	
+	endif
 	%s/\s\+$//e
 endfunction
 
