@@ -2,7 +2,9 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plug-bundles')
-Plug 'flazz/vim-colorschemes'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'https://github.com/rakr/vim-one.git'
+Plug 'https://github.com/tomasr/molokai.git'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'

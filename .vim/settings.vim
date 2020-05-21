@@ -12,7 +12,7 @@ set hlsearch
 set ttyfast
 set tabstop=4
 set shiftwidth=4
-set updatetime=300
+set updatetime=1024
 set undolevels=512
 set history=512
 set scrolloff=512
@@ -22,7 +22,6 @@ filetype plugin indent on
 if !exists("g:syntax on")
 	syntax enable
 endif
-colorscheme dracula
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -49,9 +48,3 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:jsx_ext_required = 0
 let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
-
-" Disable Background Color Erase (BCE) so that color schemes
-" render properly when inside 256-color tmux and GNU screen.
-if &term =~ '256color'
-    set t_ut=
-endif
