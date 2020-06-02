@@ -2,7 +2,6 @@
 " render properly when inside 256-color tmux and GNU screen.
 if &term =~ '256color'
     set t_ut=
-	set t_Co=256
 endif
 
 function! s:SetDracula()
