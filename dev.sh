@@ -1,2 +1,2 @@
-cp .vim ~
+cp .vim ~ -r
 cp .vimrc ~
