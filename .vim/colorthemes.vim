@@ -19,12 +19,17 @@ endfunction
 function! s:SetOne()
 	colorscheme one
 	let g:airline_theme = "one"
+	highlight Pmenu ctermfg=white
+	highlight PmenuSel ctermbg=68 ctermfg=black
 endfunction
+
+
+set background=dark
 
 "call s:SetDracula()
 "call s:SetMolokai()
 call s:SetOne()
 
-set background=dark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+
