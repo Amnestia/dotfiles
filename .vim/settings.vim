@@ -17,6 +17,15 @@ set undolevels=512
 set history=512
 set scrolloff=512
 
+
+set directory^=$HOME/.vim/swap//
+try
+	set undodir=$HOME/.vim/undo
+	set undofile
+catch
+endtry
+
+
 filetype plugin on
 filetype plugin indent on
 if !exists("g:syntax on")
