@@ -3,8 +3,7 @@
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-	  "suggest.floatEnable": false
+      "filetypes": ["go"]
     },
 	"ccls": {
       "command": "ccls",
@@ -20,8 +19,10 @@
       }
     }
   },
-  "tslint.enable": true,
-  "tslint.autoFixOnSave": true,
+  "diagnostic.displayByAle": true,
+  "go.tags": {
+	"options": "json="
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
@@ -30,6 +31,7 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
+	"svelte",
 	"rust"
   ]
 }

@@ -20,19 +20,23 @@ Plug 'elzr/vim-json'
 Plug 'othree/yajs.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'wakatime/vim-wakatime'
+Plug 'editorconfig/editorconfig-vim'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'wakatime/vim-wakatime'
+
+Plug 'dense-analysis/ale'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'jparise/vim-graphql'
-Plug 'editorconfig/editorconfig-vim'
+
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+
 Plug 'fatih/vim-go',{'do': ':GoInstallBinaries'}
-Plug 'skywind3000/asyncrun.vim'
 call plug#end()
