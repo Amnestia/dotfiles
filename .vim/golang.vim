@@ -20,3 +20,4 @@ let g:go_highlight_extra_types = 1
 autocmd FileType go nmap gtj :CocCommand go.tags.add json<cr>
 autocmd FileType go nmap gtms :CocCommand go.tags.add mapstructure<cr>
 autocmd FileType go nmap gtx :CocCommand go.tags.clear<cr>
+autocmd FileType go nmap gfs :GoFillStruct<cr>
