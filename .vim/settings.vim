@@ -1,6 +1,7 @@
 set ff=unix
 set encoding=utf-8
 set autoindent smartindent smarttab
+set list lcs=tab:\|\ |
 set number relativenumber
 set ignorecase
 set smartcase
@@ -55,3 +56,5 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:jsx_ext_required = 0
 let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
+let g:vim_json_syntax_conceal = 0
+

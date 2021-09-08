@@ -24,6 +24,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'yggdroot/indentline'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -38,5 +41,5 @@ Plug 'jparise/vim-graphql'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
-Plug 'fatih/vim-go',{'do': ':GoInstallBinaries'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()

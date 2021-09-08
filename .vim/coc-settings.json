@@ -2,13 +2,29 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
     },
-	"ccls": {
+    "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
-      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "filetypes": [
+        "c",
+        "cpp",
+        "cuda",
+        "objc",
+        "objcpp"
+      ],
+      "rootPatterns": [
+        ".ccls-root",
+        "compile_commands.json"
+      ],
       "initializationOptions": {
         "cache": {
           "directory": ".ccls-cache"
@@ -21,7 +37,7 @@
   },
   "diagnostic.displayByAle": true,
   "go.tags": {
-	"options": "json="
+    "options": "json="
   },
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
@@ -31,7 +47,7 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-	"svelte",
-	"rust"
+    "svelte",
+    "rust"
   ]
 }

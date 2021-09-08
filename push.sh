@@ -1,4 +1,10 @@
 #!/bin/bash
+
+cp ~/.vim/*.vim .vim/ &&
+cp ~/.vim/coc-settings.json .vim/ &&
+cp ~/.vim/autoload .vim/ -r
+cp ~/.vim/snippets .vim/ -r
+
 if [ -z "$1" ]
 then
 	echo "Should define remote"
@@ -11,9 +17,6 @@ then
 	exit 1
 fi
 
-cp ~/.vim/*.vim .vim/ &&
-cp ~/.vim/coc-settings.json .vim/ &&
-cp ~/.vim/autoload .vim/ -r &&
 git add . &&
 git commit -e
 git push $1 "$2"

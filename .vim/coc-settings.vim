@@ -19,5 +19,6 @@ let g:coc_global_extensions=[
 \ 'coc-markdownlint',
 \ 'coc-import-cost',
 \ 'coc-docker',
-\ 'coc-flutter'
+\ 'coc-flutter',
+\ 'coc-html'
 \ ]

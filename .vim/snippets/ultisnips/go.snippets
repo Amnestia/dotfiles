@@ -1,0 +1,27 @@
+snippet gotest "go test template snippet"
+func Test${1:name}(t *testing.T) {
+	type args struct {
+		param string
+	}
+	type want struct{}
+	tests := []struct {
+		name string
+		args args
+		want want
+		patch func(args args)
+	}{
+		// TODO: Add test cases.
+		{
+			name: "NoError_ExpectSuccess",
+			args: args{},
+			patch: func(args args){},
+			want: want{},
+		},
+	}
+	for _, tt := range tests {
+		tt.patch(tt.args)
+		t.Run(tt.name, func(t *testing.T) {
+		})
+	}
+}
+endsnippet
