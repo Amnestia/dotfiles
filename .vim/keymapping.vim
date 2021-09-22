@@ -18,3 +18,10 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
+nnoremap <C-n> :NERDTreeFocus<CR>
+
+"" Visual block
+nnoremap <C-V> <C-v>
+
+"" Swap two words ex. b = a -> a = b
+nnoremap cx yiwwwviwpbbbviwp
