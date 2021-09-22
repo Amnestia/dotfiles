@@ -17,6 +17,7 @@ set updatetime=1024
 set undolevels=512
 set history=512
 set scrolloff=512
+set backspace=indent,eol,start
 
 set directory^=$HOME/.vim/swap//
 try
@@ -57,4 +58,3 @@ let g:jsx_ext_required = 0
 let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 let g:vim_json_syntax_conceal = 0
-

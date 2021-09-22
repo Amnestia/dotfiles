@@ -25,3 +25,7 @@ nnoremap <C-V> <C-v>
 
 "" Swap two words ex. b = a -> a = b
 nnoremap cx yiwwwviwpbbbviwp
+
+"" Error navigations
+nnoremap <leader>[ :lprev<CR>
+nnoremap <leader>] :lnext<CR>
