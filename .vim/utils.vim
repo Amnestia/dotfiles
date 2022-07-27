@@ -8,6 +8,7 @@ autocmd VimEnter * RainbowParenthesesToggle
 autocmd Syntax * RainbowParenthesesLoadRound
 autocmd Syntax * RainbowParenthesesLoadSquare
 autocmd Syntax * RainbowParenthesesLoadBraces
+autocmd BufWritePost COMMIT_EDITMSG :%w !commitlint
 
 function! StripTrailingWhitespace()
 	if exists('b:noStrip')

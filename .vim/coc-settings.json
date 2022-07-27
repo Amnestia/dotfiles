@@ -49,5 +49,6 @@
     "typescriptreact",
     "svelte",
     "rust"
-  ]
+  ],
+  "svelte.enable-ts-plugin": true
 }
