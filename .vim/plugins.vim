@@ -21,7 +21,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'yggdroot/indentline'
 Plug 'SirVer/ultisnips'
@@ -30,6 +29,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
+Plug 'https://github.com/jasonccox/vim-wayland-clipboard.git'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -47,6 +47,7 @@ Plug 'prettier/vim-prettier', {
 
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 

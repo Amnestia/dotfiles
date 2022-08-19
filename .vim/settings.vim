@@ -18,7 +18,6 @@ set undolevels=512
 set history=512
 set scrolloff=512
 set backspace=indent,eol,start
-
 set directory^=$HOME/.vim/swap//
 try
 	set undodir=$HOME/.vim/undo

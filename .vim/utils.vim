@@ -31,3 +31,4 @@ endfunction
 
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 command! -range=% EraseBadWhitespace call <SID>EraseBadWhitespace(<line1>,<line2>)
+
