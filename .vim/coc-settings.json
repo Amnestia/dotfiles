@@ -12,6 +12,15 @@
         "go"
       ]
     },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": [
+        "rust"
+      ],
+      "rootPatterns": [
+        "Cargo.toml"
+      ]
+    },
     "ccls": {
       "command": "ccls",
       "filetypes": [
@@ -47,8 +56,7 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "svelte",
-    "rust"
+    "svelte"
   ],
   "svelte.enable-ts-plugin": true
 }

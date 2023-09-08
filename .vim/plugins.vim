@@ -36,6 +36,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'chrisbra/colorizer'
 
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
@@ -48,6 +49,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
+Plug 'lervag/vimtex'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 

@@ -14,11 +14,8 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Windows navigations
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
 nnoremap <C-n> :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 "" Visual block
 nnoremap <C-V> <C-v>

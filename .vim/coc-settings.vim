@@ -14,7 +14,7 @@ let g:coc_global_extensions=[
 \ 'coc-tsserver',
 \ 'coc-svelte',
 \ 'coc-sql',
-\ 'coc-rls',
+\ 'coc-rust-analyzer',
 \ 'coc-python',
 \ 'coc-markdownlint',
 \ 'coc-import-cost',
