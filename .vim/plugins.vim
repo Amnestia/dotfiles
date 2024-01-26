@@ -1,6 +1,3 @@
-set nocompatible
-filetype off
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -26,21 +23,23 @@ Plug 'yggdroot/indentline'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 Plug 'https://github.com/jasonccox/vim-wayland-clipboard.git'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
+Plug 'chrisbra/colorizer'
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'chrisbra/colorizer'
+Plug 'PhilRunninger/nerdtree-visual-selection'
 
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
@@ -51,6 +50,8 @@ Plug 'racer-rust/vim-racer'
 
 Plug 'lervag/vimtex'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', {'branch':'master', 'do': ':GoUpdateBinaries' }
 
 call plug#end()
+
+command! PlugUp PlugUpgrade | PlugUpdate | CocUpdateQuit

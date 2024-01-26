@@ -1,0 +1,89 @@
+snippet coor "Coordinate"
+type Coordinate struct {
+	X int64
+	Y int64
+}
+
+func getCoordinate(a,b Coordinate)Coordinate{
+	return Coordinate{
+		X: a.X + b.X,
+		Y: a.Y + b.Y,
+	}
+}
+
+func (c *Coordinate) outOfLimit(limit Coordinate) bool{
+	return c.X < 0 || c.Y < 0 || c.X >= limit.X || c.Y >= limit.Y
+}
+endsnippet
+
+snippet gridbfs "Grid Based Breadth-first Search"
+coor$1
+
+func bfs(grid []string) {
+	gridMax := Coordinate{X: int64(len(grid[0])), Y: int64(len(grid))}
+	visited := map[Coordinate]bool{}
+	q := []Coordinate{
+		{0, 0},
+	}
+	direction := []Coordinate{
+		{X: 1, Y: 0}, {X: -1, Y: 0},
+		{X: 0, Y: 1}, {X: 0, Y: -1},
+		{X: 1, Y: 1}, {X: 1, Y: -1},
+		{X: -1, Y: -1}, {X: -1, Y: 1},
+	}
+	for len(q) > 0 {
+		current := q[0]
+		q = q[1:]
+		if visited[current] {
+			continue
+		}
+		visited[current] = true
+		for _, coor := range direction {
+			next := getCoordinate(current, coor)
+			if next.outOfLimit(gridMax){
+				continue
+			}
+			if visited[next] {
+				continue
+			}
+			q = append(q, next)
+		}
+	}
+}
+endsnippet
+
+snippet dfs "Breadth-first Search"
+func dfs(){
+}
+endsnippet
+
+snippet dijkstra "Dijkstra Shortest-Path Algorithm"
+pq$1
+
+type AdjList map[int]int
+
+func dijsktra(nodes, start,end int, graph map[int]AdjList) int{
+	distance := map[int]int{}
+	for i := 0; i < nodes; i++ {
+		distance[nodes]=math.MaxInt
+	}
+	distance[start]=0
+	pq := PriorityQueue{}
+	heap.Init(&pq)
+	heap.Push(&pq, Item{Value:start, Priority:0})
+	for len(pq) > 0{
+		curr := heap.Pop(&pq).(Item)
+		if curr.Priority > distance[curr.Value]{
+			continue
+		}
+		for key, val := range graph[curr.Value]{
+			dist := val + curr.Priority
+			if distance[key] > dist{
+				heap.Push(&pq, Item{Value:key, Priority: dist})
+				distance[key]=dist
+			}
+		}
+	}
+	return distance[end]
+}
+endsnippet

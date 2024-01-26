@@ -1,0 +1,42 @@
+snippet gooj "CP go template" b
+package main
+
+import (
+	"bufio"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+	${1}
+}
+
+func readLine(in *bufio.Reader) (ret []string) {
+	s, _ := in.ReadString('\n')
+	s = strings.ReplaceAll(s, "\r", "")
+	s = strings.ReplaceAll(s, "\n", "")
+	return strings.Split(s, " ")
+}
+
+func readNum(in *bufio.Reader) []int64 {
+	lineNums := readLine(in)
+	arr := make([]int64, len(lineNums))
+	for i, n := range lineNums {
+		val, _ := strconv.ParseInt(n, 10, 64)
+		arr[i] = val
+	}
+	return arr
+}
+
+func readFloat(in *bufio.Reader) []float64 {
+	lineNums := readLine(in)
+	arr := make([]float64, len(lineNums))
+	for i, n := range lineNums {
+		val, _ := strconv.ParseFloat(n, 64)
+		arr[i] = val
+	}
+	return arr
+}
+endsnippet

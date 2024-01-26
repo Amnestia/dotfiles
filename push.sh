@@ -2,7 +2,6 @@
 
 cp ~/.vim/*.vim .vim/ &&
 cp ~/.vim/coc-settings.json .vim/ &&
-cp ~/.vim/autoload .vim/ -r
 cp ~/.vim/snippets .vim/ -r
 
 if [ -z "$1" ]

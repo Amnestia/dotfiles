@@ -1,0 +1,65 @@
+snippet pq "Priority Queue"
+type Item struct {
+	Value    int
+	Priority int
+	Index    int
+}
+
+type PriorityQueue []Item
+
+func (pq PriorityQueue) Len() int {
+	return len(pq)
+}
+
+func (pq PriorityQueue) Less(i, j int) bool {
+	return pq[i].Priority < pq[j].Priority
+}
+
+func (pq PriorityQueue) Swap(i, j int) {
+	pq[i], pq[j] = pq[j], pq[i]
+	pq[i].Index = i
+	pq[j].Index = j
+}
+
+func (pq *PriorityQueue) Push(x any) {
+	i := x.(Item)
+	i.Index = len(*pq)
+	*pq = append(*pq, i)
+}
+
+func (pq *PriorityQueue) Pop() any {
+	old := *pq
+	n := len(*pq)
+	i := old[n-1]
+	*pq = old[:n-1]
+	return i
+}
+endsnippet
+
+snippet disjointset "Disjoint Set"
+func makeSet(n int64) map[int64]int64 {
+	ret := map[int64]int64{}
+	for i := int64(0); i < n; i++ {
+		ret[i] = i
+	}
+	return ret
+}
+
+func findParent(curr int64, parent map[int64]int64) int64 {
+	for parent[curr] != curr {
+		parent[curr] = parent[parent[curr]]
+		curr = parent[curr]
+	}
+	return curr
+}
+
+func unite(x, y int64, parent map[int64]int64) bool {
+	parentX := findParent(x, parent)
+	parentY := findParent(y, parent)
+	if parentX == parentY {
+		return false
+	}
+	parent[parentX] = parentY
+	return true
+}
+endsnippet

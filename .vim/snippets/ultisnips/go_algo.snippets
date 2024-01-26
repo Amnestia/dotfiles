@@ -1,0 +1,60 @@
+snippet minf "Get minimum(not used for 1.21)"
+func minf(a,b int64) int64{
+	if a<b{
+		return a
+	}
+	return b
+}
+endsnippet
+
+snippet maxf "Get maximum(not used for 1.21)"
+func maxf(a,b int64) int64{
+	if a>b{
+		return a
+	}
+	return b
+}
+endsnippet
+
+snippet binex "Binary Exponentiation"
+func binEx(x, y int64) (ret int64){
+	ret = 1
+	for y>0{
+		if(y%2==1){
+			ret=ret*x
+		}
+		x = x*x
+		y>>=1
+	}
+	return ret
+}
+endsnippet
+
+snippet binexmod "Binary Exponentiation"
+func binEx(x, y, m int64) (ret int64){
+	x%=m
+	ret = 1
+	for y>0{
+		if(y%2==1){
+			ret=((ret%m)*(x%m))%m
+		}
+		x = ((x%m)*(x%m))%m
+		y>>=1
+	}
+	return ret
+}
+endsnippet
+
+snippet knapsack "Knapsack 0-1 Problem"
+func knapsack(itemCount, maxWeight int64, items [][]int64) int64 {
+	memo := make([]int64, maxWeight+1)
+	for i := int64(1); i <= itemCount; i++ {
+		for currWeight := int64(maxWeight); currWeight >= 0; currWeight-- {
+			if val, weight := items[i-1][0], items[i-1][1]; weight <= currWeight {
+				memo[currWeight] = maxf(memo[currWeight], memo[currWeight-weight]+val)
+			}
+		}
+	}
+	return memo[maxWeight]
+}
+endsnippet

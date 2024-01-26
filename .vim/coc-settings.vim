@@ -2,10 +2,10 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 let g:coc_global_extensions=[
 \ 'coc-json',
-\ 'coc-go',
 \ 'coc-tailwindcss',
 \ 'coc-snippets',
 \ 'coc-omni',
+\ 'coc-go',
 \ 'coc-marketplace',
 \ 'coc-gitignore',
 \ 'coc-git',
@@ -22,3 +22,13 @@ let g:coc_global_extensions=[
 \ 'coc-flutter',
 \ 'coc-html'
 \ ]
+
+function! s:CocUpdateCallback(err, ...) abort
+	if a:err
+		echo a:err
+	else
+		execute 'qa'
+	endif
+endfunction
+
+command! CocUpdateQuit :call CocActionAsync('updateExtensions', v:false, function('<sid>CocUpdateCallback'))
