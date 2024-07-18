@@ -1,1 +1,5 @@
-# Personal vim config
+# Dotfiles
+
+## Vim
+
+## Waybar

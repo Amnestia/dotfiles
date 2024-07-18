@@ -16,6 +16,7 @@ noremap <leader>w :bn<CR>
 "" Windows navigations
 nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-u> :UndotreeToggle<CR>
 
 "" Visual block
 nnoremap <C-V> <C-v>

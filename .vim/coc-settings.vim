@@ -2,7 +2,6 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 let g:coc_global_extensions=[
 \ 'coc-json',
-\ 'coc-tailwindcss',
 \ 'coc-snippets',
 \ 'coc-omni',
 \ 'coc-go',
@@ -12,6 +11,9 @@ let g:coc_global_extensions=[
 \ 'coc-yaml',
 \ 'coc-vimlsp',
 \ 'coc-tsserver',
+\ 'coc-css',
+\ 'coc-cssmodules',
+\ '@yaegassy/coc-tailwindcss3',
 \ 'coc-svelte',
 \ 'coc-sql',
 \ 'coc-rust-analyzer',

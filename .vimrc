@@ -11,5 +11,5 @@ source ~/.vim/autocomplete.vim
 source ~/.vim/colorthemes.vim
 source ~/.vim/fzf.vim
 source ~/.vim/snippets.vim
-"source ~/.vim/ale.vim
+source ~/.vim/ale.vim
 
