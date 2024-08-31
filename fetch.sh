@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scripts_dir=./scripts
+scripts_dir=./scripts/fetch
 
 for i in $(ls $scripts_dir)
 do
