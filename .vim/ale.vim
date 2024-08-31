@@ -6,15 +6,17 @@ let g:ale_linter_aliases = {
 \   'svelte': ['javascript']
 \}
 let g:ale_linters = {
-\	'css': ['prettier'],
-\	'html': ['prettier'],
-\   'svelte': ['eslint'],
-\   'java': ['javac']
+\	'css': 			['prettier'],
+\	'html':			['prettier'],
+\   'svelte': 		['eslint'],
+\   'java':			['javac'],
+\   'markdown':		['mdl']
 \}
 let g:ale_fixers = {
-\	'css': ['prettier'],
-\	'html': ['prettier'],
-\   'svelte': ['eslint']
+\	'css': 		['prettier'],
+\	'html': 	['prettier'],
+\   'svelte': 	['eslint'],
+\   '*':		['remove_trailing_lines', 'trim_whitespace']
 \}
 
 let g:ale_disable_lsp = 1

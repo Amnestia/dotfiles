@@ -29,3 +29,6 @@ autocmd FileType go nmap gru :GoRun %<cr>
 
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd Filetype go nmap <Leader>e :'<,'>GoFreevars
+
+"" Golang interface function name copy cleanup
+autocmd Filetype go nnoremap <Leader>gir 6dwA<Esc>x

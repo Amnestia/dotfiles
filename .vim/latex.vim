@@ -1,6 +1,10 @@
 " let g:vimtex_view_method = 'mupdf'
 " let g:vimtex_view_general_viewer = 'mupdf'
 let g:vimtex_quickfix_mode = 0
+let g:vimtex_compiler_latexmk_engines = {
+    \ '_' : '-xelatex',
+    \}
+
 let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_compiler_latexmk = {
     \ 'aux_dir' : '',
@@ -8,7 +12,6 @@ let g:vimtex_compiler_latexmk = {
     \ 'callback' : 1,
     \ 'continuous' : 0,
     \ 'executable' : 'latexmk',
-    \ 'hooks' : [],
     \ 'options' : [
     \   '-verbose',
     \   '-file-line-error',

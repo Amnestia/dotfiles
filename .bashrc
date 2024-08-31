@@ -25,8 +25,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=3000
-HISTFILESIZE=50000
+HISTSIZE=2000
+HISTFILESIZE=30000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -151,4 +151,3 @@ source ~/.profile
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-

@@ -14,7 +14,7 @@ then
 	pkill wlsunset > /dev/null 2>&1
 else
 	icon=""
-	wlsunset -t $CURR &#-T $(($CURR+1)) -S 09:00 -s 16:00
+	wlsunset -t $CURR -T $(($CURR+1)) &#-S 09:00 -s 16:00
 fi
 
 fmt=$(printf '{"text": "%s", "percentage":%s, "tooltip":"%s"}' "$icon" "$CURR" "$CURR")

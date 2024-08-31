@@ -37,6 +37,6 @@ then
 	pkill wlsunset > /dev/null 2>&1
 fi
 
-wlsunset -t $CURR & #-T $(($CURR+1)) -S 09:00 -s 16:00
+wlsunset -t $CURR -T $(($CURR+1)) & #-S 09:00 -s 16:00
 
 pkill -RTMIN+4 waybar

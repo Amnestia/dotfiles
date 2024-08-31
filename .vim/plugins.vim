@@ -12,12 +12,11 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'PhilRunninger/nerdtree-visual-selection'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'mbbill/undotree'
 
+Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'SirVer/ultisnips'
@@ -33,6 +32,9 @@ Plug 'fatih/vim-go', {'branch':'master', 'do': ':GoUpdateBinaries' }
 
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
 
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'

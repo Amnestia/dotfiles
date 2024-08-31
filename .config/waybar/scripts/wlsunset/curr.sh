@@ -1,2 +1,2 @@
-CURR=3300
-echo '{"text": "", "percentage":3300, "tooltip":"3300"}' || jq --unbuffered --compact-output
+CURR=2700
+echo '{"text": "", "percentage":2700, "tooltip":"2700"}' || jq --unbuffered --compact-output

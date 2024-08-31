@@ -58,3 +58,8 @@ let g:jsx_ext_required = 0
 let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 let g:vim_json_syntax_conceal = 0
+
+let g:NERDDefaultAlign = 'left'
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDCompactSexyComs = 1

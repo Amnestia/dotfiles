@@ -42,7 +42,7 @@
     "format": "{name}"
   },
   "clock": {
-    "format": "{:%Y年%m月%d日 %A %H:%M:%S}",
+    "format": "{:%Y年%m月%d日 %A %H:%M:%S %Z}",
     "tooltip": false,
     "interval": 1
   },
@@ -52,10 +52,11 @@
     "format-icons": [
       "",
       "",
-      ""
+      " "
     ],
     "max-volume": 150,
 	"on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	"on-click-right":"pavucontrol",
     "scroll-step": 5
   },
   "pulseaudio": {
@@ -64,8 +65,7 @@
     "format-source-muted": "",
 	"on-click":"pactl set-source-mute @DEFAULT_SOURCE@ toggle",
 	"on-scroll-up":"pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-	"on-scroll-down":"pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-    "scroll-step": 1
+	"on-scroll-down":"pactl set-source-volume @DEFAULT_SOURCE@ -1%"
   },
   "memory": {
     "interval": 5,
