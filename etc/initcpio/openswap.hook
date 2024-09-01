@@ -1,0 +1,4 @@
+run_hook ()
+{
+    cryptsetup open /dev/device swapDevice
+}
