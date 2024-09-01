@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo cp -r etc/greetd /etc/greetd
+sudo cp etc/greetd/* /etc/greetd/
