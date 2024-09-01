@@ -24,7 +24,7 @@ mount /dev/mapper/root /mnt
 swapon /dev/mapper/swap
 mount --mkdir /dev/sda1 /mnt/boot
 
-pacstrap -K /mnt base base-devel linux linux-firmware intel-ucode vim git e2fsprogs sudo iwd pacman-contrib 
+pacstrap -K /mnt base base-devel linux linux-firmware intel-ucode vim git e2fsprogs sudo dhcpcd pacman-contrib 
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -50,7 +50,8 @@ locale-gen
 echo LANG=en_US.UTF-8 | sudo tee /etc/locale.conf
 
 # Package installation
-sudo pacman -S grub efibootmgr
+sudo pacman -S grub efibootmgr docker docker-compose
+sudo usermod -a -G docker user
 
 # Setup mkinitcpio
 vim /etc/initcpio/hooks/openswap
@@ -89,10 +90,8 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
-paru -S fcitx5-mozc docker flatpak sway mako waybar wlsunset swaylock swayidle rofi-lbonn-wayland-git tmux tilix python-pipx mkinitcpio-busybox mkinitcpio-openswap fastfetch udisks2 thunar
-sudo usermod -a -G docker user
-paru -S mkinitcpio-firmware 
 paru -Syu
+paru -S fcitx5-mozc docker docker-compose flatpak sway mako waybar wlsunset swaylock swayidle rofi-lbonn-wayland-git tmux tilix python-pipx mkinitcpio-busybox mkinitcpio-firmware fastfetch udisks2 thunar
 
 # Setup NTP (https://www.ntppool.org/en/)
 # 0.id.pool.ntp.org 1.id.pool.ntp.org 2.id.pool.ntp.org 3.id.pool.ntp.org
