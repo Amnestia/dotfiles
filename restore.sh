@@ -7,3 +7,5 @@ do
 	echo "======================== Executing $scripts_dir/$i ==============================="
 	$scripts_dir/$i
 done
+
+cp -r scripts/utils ../script

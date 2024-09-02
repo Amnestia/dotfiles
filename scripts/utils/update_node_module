@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for i in $(npm outdated | awk 'NR!=1{print $1}')
+do
+	npm install $i@latest
+done
