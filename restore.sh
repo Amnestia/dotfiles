@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scripts_dir=./scripts/pull
+scripts_dir=./scripts/restore
 
 for i in $(ls $scripts_dir)
 do

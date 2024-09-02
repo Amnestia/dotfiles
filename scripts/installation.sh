@@ -74,6 +74,7 @@ HELPEOF
 vim /etc/mkinitcpio.conf
 # Update hooks
 # HOOKS=(base udev autodetect keyboard keymap modconf block encrypt openswap resume filesystems fsck)
+sudo mkinitcpio -P
 
 # Setup GRUB
 sudo vim /etc/default/grub
@@ -82,29 +83,3 @@ sudo vim /etc/default/grub
 sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#########################
-# Post Installation     #
-#########################
-# Setup AUR Helper
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-
-paru -Syu
-paru -S fcitx5-mozc docker docker-compose flatpak sway mako waybar wlsunset swaylock swayidle rofi-lbonn-wayland-git tmux tilix python-pipx mkinitcpio-busybox mkinitcpio-firmware fastfetch udisks2 thunar
-
-# Setup NTP (https://www.ntppool.org/en/)
-# 0.id.pool.ntp.org 1.id.pool.ntp.org 2.id.pool.ntp.org 3.id.pool.ntp.org
-# 0.jp.pool.ntp.org 1.jp.pool.ntp.org 2.jp.pool.ntp.org 3.jp.pool.ntp.org
-sudo timedatectl set-ntp true
-sudo vim /etc/systemd/timesyncd.conf
-
-sudo systemctl enable systemd-timesyncd.service
-sudo systemctl enable paccache.timer
-
-# Setup pacman cache config
-paccache -rk1
-paccache -ruk1
-
-paru -S thunderbird-beta 
-flatpak install flathub org.mozilla.firefox com.usebruno.Bruno io.dbeaver.DBeaverCommunity
