@@ -1,0 +1,15 @@
+services:
+  veshtiadev-db:
+    build:
+      context: .
+      dockerfile: ../Dockerfile
+    command: -c ssl=on -c ssl_cert_file=/var/lib/postgresql/server.crt -c ssl_key_file=/var/lib/postgresql/server.key
+    ports:
+    - "10001:5432"
+    env_file:
+      - env
+    volumes:
+      - postgresdb:/var/lib/postgresql/data/
+
+volumes:
+  postgresdb:

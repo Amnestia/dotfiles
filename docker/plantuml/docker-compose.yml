@@ -1,0 +1,6 @@
+services:
+  plantuml:
+    image: 'plantuml/plantuml-server:jetty'
+    ports:
+    - '10005:8080'
+
