@@ -17,6 +17,7 @@
     "battery",
     "disk",
     "network",
+	"backlight",
 	"idle_inhibitor",
 	"custom/wlsunset",
     "tray"
@@ -40,6 +41,11 @@
   "sway/workspaces": {
     "disable-scroll": true,
     "format": "{name}"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
   },
   "clock": {
     "format": "{:%Y年%m月%d日 %A %H:%M:%S %Z}",

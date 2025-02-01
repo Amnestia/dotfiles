@@ -30,6 +30,7 @@ window#waybar {
 #disk,
 #network,
 #idle_inhibitor,
+#backlight,
 #custom-wlsunset,
 #tray {
   background: #1a1a1a;
@@ -103,12 +104,13 @@ window#waybar {
   color: #b58900;
 }
 
-#idle_inhibitor {
-  color: #268bd2;
+#backlight,
+#idle_inhibitor,
+#custom-wlsunset {
   padding: 0 8px;
 }
 
+#idle_inhibitor,
 #custom-wlsunset {
   color: #268bd2;
-  padding: 0 8px;
 }

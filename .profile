@@ -2,6 +2,7 @@ export GOPATH=~/workspace/dev/go
 export GOBIN=$GOPATH/bin
 export GOPROXY=direct
 export GOTELEMETRY=off
+export LESS=-R
 
 
 export DEV_BIN_ENV=$GOBIN
@@ -33,6 +34,7 @@ export GLFW_IM_MODULE=ibus
 export XMODIFIERS="@im=fcitx5"
 export GDK_BACKEND=wayland
 export MOZ_ENABLE_WAYLAND=1
+export VDPAU_DRIVER=nouveau
 
 export WINEPREFIX=~/games/default
 

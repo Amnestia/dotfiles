@@ -4,13 +4,13 @@ type Item struct {
 	Priority int
 }
 
-type PriorityQueue []Item
+type Heap []Item
 
-func (pq PriorityQueue) Len() int { return len(pq) }
-func (pq PriorityQueue) Less(i, j int) bool { return pq[i].Priority < pq[j].Priority }
-func (pq PriorityQueue) Swap(i, j int) { pq[i], pq[j] = pq[j], pq[i] }
-func (pq *PriorityQueue) Push(x any) { *pq = append(*pq, x.(Item)) }
-func (pq *PriorityQueue) Pop() any {
+func (pq Heap) Len() int { return len(pq) }
+func (pq Heap) Less(i, j int) bool { return pq[i].Priority < pq[j].Priority }
+func (pq Heap) Swap(i, j int) { pq[i], pq[j] = pq[j], pq[i] }
+func (pq *Heap) Push(x any) { *pq = append(*pq, x.(Item)) }
+func (pq *Heap) Pop() any {
 	old := *pq
 	n := len(*pq)
 	i := old[n-1]
