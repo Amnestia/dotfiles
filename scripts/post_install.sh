@@ -21,8 +21,8 @@ makepkg -si
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 paru -Syu
-paru -S dnscrypt-proxy rust bash-completion go nomacs 7-zip-full sublime-text-4 fcitx5-mozc docker docker-compose flatpak sway mako waybar wlsunset swaylock greetd swayidle swaybg greetd-gtkgreet fzf xdg-desktop-portal-wlr xdg-desktop-portal-gtk rofi-lbonn-wayland-git tmux tilix python-pipx fastfetch udisks2 thunar thunderbird-beta-bin wireplumber
-flatpak install flathub org.mozilla.firefox com.usebruno.Bruno io.dbeaver.DBeaverCommunity
+paru -S dnscrypt-proxy rustup bash-completion go nomacs 7-zip-full sublime-text-4 fcitx5-mozc docker docker-compose flatpak sway mako waybar wlsunset swaylock greetd swayidle swaybg greetd-gtkgreet fzf xdg-desktop-portal-wlr xdg-desktop-portal-gtk rofi-lbonn-wayland-git tmux tilix python-pipx fastfetch udisks2 thunar thunderbird-beta-bin wireplumber mesa firefox lib32-mesa vulkan-radeon wdisplays
+flatpak install flathub com.usebruno.Bruno io.dbeaver.DBeaverCommunity net.lutris.Lutris dev.vencord.Vesktop
 
 source ~/.bashrc
 nvm install --lts
